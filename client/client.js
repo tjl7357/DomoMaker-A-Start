@@ -54,6 +54,7 @@ const init = () => {
       const pass = signupForm.querySelector('#pass').value;
       const pass2 = signupForm.querySelector('#pass2').value;
 
+      /*
       if(!username || !pass || !pass2) {
         handleError('All fields are required!');
         return false;
@@ -63,6 +64,7 @@ const init = () => {
         handleError('Passwords do not match!');
         return false;
       }
+      */
 
       sendPost(signupForm.getAttribute('action'), {username, pass, pass2});
       return false;
@@ -82,10 +84,12 @@ const init = () => {
       const username = loginForm.querySelector('#user').value;
       const pass = loginForm.querySelector('#pass').value;
 
+      /*
       if(!username || !pass) {
         handleError('Username or password is empty!');
         return false;
       }
+      */
 
       sendPost(loginForm.getAttribute('action'), {username, pass});
       return false;
@@ -105,10 +109,12 @@ const init = () => {
       const name = domoForm.querySelector('#domoName').value;
       const age = domoForm.querySelector('#domoAge').value;
 
+      /*
       if(!name || !age) {
         handleError('All fields are required!');
         return false;
       }
+      */
 
       sendPost(domoForm.getAttribute('action'), {name, age});
       return false;
