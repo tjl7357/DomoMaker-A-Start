@@ -32,7 +32,7 @@ const redisClient = redis.createClient({
   url: process.env.REDISCLOUD_URL,
 });
 
-redisClient.on('error', err => console.log('Redis Client Error', err));
+redisClient.on('error', (err) => console.log('Redis Client Error', err));
 
 // Connect to the Redis Client
 redisClient.connect().then(() => {
@@ -70,5 +70,3 @@ redisClient.connect().then(() => {
     console.log(`Listening on port ${port}`);
   });
 });
-
-
